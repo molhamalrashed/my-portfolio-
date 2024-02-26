@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import {useState} from 'react';
+import Image from 'next/image';
 
 const links = [
 {url: '/', title: 'Home'},
@@ -14,14 +15,31 @@ const Navbar = () => {
     const [open, setOpen] = useState(false); 
 return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* Logo */}
-    <div className= 'md:hidden'>
+        <div className='hidden md:flex flex-raw justify-between gap-4'>
+            {links.map((link)=> (
+                <Link href={link.url} key={link.title}>{link.title}</Link>
+            ))}
+        </div>
+    {/* Logo */}
+    <div className= 'md:hidden lg:flex'>
         <Link href="/" className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
             <span className='text-white mr-1'>Molham</span>
             <span className='w-20 h-8 rounded bg-white text-black flex items-center justify-center'>Alrashed</span>
         </Link>
     </div>
 
+    {/* Contact Items */}
+        <div className='hidden md:flex gap-4'>
+        <Link href='https://github.com/molhamalrashed' target='_blank'>
+        <Image src='/github.png' alt="" width={24} height={24} />
+        </Link>
+        <Link href='https://www.linkedin.com/in/molham-alrashed/' target='_blank'>
+        <Image src='/linkedin.png' alt="" width={24} height={24} />
+        </Link>
+        <Link href='https://www.facebook.com/molhamalrashed' target='_blank'>
+        <Image src='/facebook.png' alt="" width={24} height={24} />
+        </Link>
+        </div>
     {/* Responsive menu */}
     <div className='md:hidden'>
         <button className ='w-10 h-8 flex flex-col justify-between z-50 relative' onClick={()=>{setOpen(!open)}}>
