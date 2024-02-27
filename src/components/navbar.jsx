@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import {useState} from 'react';
 import Image from 'next/image';
+import NavLink from "./navLink";
 
 const links = [
 {url: '/', title: 'Home'},
@@ -15,13 +16,14 @@ const Navbar = () => {
     const [open, setOpen] = useState(false); 
 return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        <div className='hidden md:flex flex-raw justify-between gap-4'>
+    {/* Links */}
+        <div className='hidden md:flex flex-raw justify-between gap-4 w-1/3'>
             {links.map((link)=> (
-                <Link href={link.url} key={link.title}>{link.title}</Link>
+                <NavLink link={link} key={link.title} />
             ))}
         </div>
     {/* Logo */}
-    <div className= 'md:hidden lg:flex'>
+    <div className= 'md:hidden lg:flex w-1/3 justify-center'>
         <Link href="/" className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
             <span className='text-white mr-1'>Molham</span>
             <span className='w-20 h-8 rounded bg-white text-black flex items-center justify-center'>Alrashed</span>
@@ -29,7 +31,7 @@ return (
     </div>
 
     {/* Contact Items */}
-        <div className='hidden md:flex gap-4'>
+        <div className='hidden md:flex gap-4 w-1/3'>
         <Link href='https://github.com/molhamalrashed' target='_blank'>
         <Image src='/github.png' alt="" width={24} height={24} />
         </Link>
