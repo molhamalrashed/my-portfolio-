@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Animation from "@/components/animation";
+import TransitionProvider from "@/components/animation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-       <Animation>{children}</Animation>
+       <TransitionProvider>{children}</TransitionProvider>
         </body>
     </html>
   );
