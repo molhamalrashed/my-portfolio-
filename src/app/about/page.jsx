@@ -1,6 +1,9 @@
 "use client";
 
 import {motion} from "framer-motion";
+
+const skills = ["Javascript", "React", "Node", "Express", "MongoDB","MySQL", "HTML", "CSS", "Tailwind", "Bootstrap","Next.js",  "Git", "Figma", "Photoshop","Audition", "Voice Acting", "Teaching"];
+
 const AboutPage = () => {
 return (
     <motion.div className='h-full' initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}} >
@@ -39,7 +42,9 @@ return (
         {/* Skills */}
                 <div className="flex flex-col gap-8 justify-center pt-12">
                     <h1 className="text-2xl font-bold">Skills</h1>
-                    <div className=""></div>
+                    <div className="flex gap-4 flex-wrap">
+                        {skills.map((skill)=> (<div className="rounded p-2 cursor-pointer bg-black text-white text-sm hover:bg-white hover:text-black" key={skill}>{skill}</div>))}
+                    </div>
                     {/* Scroll SVG */}
                     <motion.svg
                     initial={{ opacity: 0.2, y: 0 }}
