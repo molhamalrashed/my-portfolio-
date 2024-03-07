@@ -2,7 +2,7 @@
 
 import {motion} from "framer-motion";
 
-const skills = ["Javascript", "React", "Node", "Express", "MongoDB","MySQL", "HTML", "CSS", "Tailwind", "Bootstrap","Next.js",  "Git", "Figma", "Photoshop","Audition", "Voice Acting", "Teaching"];
+const skills = ["Javascript", "React", "Node", "Express", "MongoDB","MySQL", "HTML", "CSS", "Tailwind", "Bootstrap","Next.js","Git", "Figma", "Photoshop","Audition", "Voice Acting", "Teaching"];
 
 const AboutPage = () => {
 return (
