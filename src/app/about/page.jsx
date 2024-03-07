@@ -70,11 +70,14 @@ return (
                     </motion.svg>
                 </div>
                 {/* Experience */}
-                <div>Experience</div>
+                <div className="flex flex-col gap-8 justify-center pt-12 pb-48">
+                    <h1 className="text-2xl font-bold">Experience</h1>
+                    {/* Experience list */}
+                    <div className=""></div>
+                </div>
             </div>
             {/* SVG container */}
             <div className="hidden">
-
             </div>
         </div>
     </motion.div>
