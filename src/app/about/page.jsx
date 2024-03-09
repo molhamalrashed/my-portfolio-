@@ -7,7 +7,7 @@ const skills = ["Javascript", "React", "Node", "Express", "MongoDB","MySQL", "HT
 const AboutPage = () => {
 return (
     <motion.div className='h-full' initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}} >
-        <div>
+        <div className="h-full overflow-scroll">
     {/* Text container */}
             <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
         {/* Biography */}
@@ -73,7 +73,80 @@ return (
                 <div className="flex flex-col gap-8 justify-center pt-12 pb-48">
                     <h1 className="text-2xl font-bold">Experience</h1>
                     {/* Experience list */}
-                    <div className=""></div>
+                    <div className="">
+                        {/* Experience list item 1 */}
+                        <div className="flex justify-between h-48">
+                        {/* Left side */}
+                        <div className="w-1/3">
+                        <div className="bg-white font-semibold p-3 rounded-b-lg rounded-s-lg">Full Stack Web Developer Trainee</div>
+                        <div className="text-sm p-3 italic">Building Full stack web application using Javascript, HTML, CSS, React, MongoDB and other technologies.</div>
+                        <div className="p-3 font-semibold text-red-400 text-sm">March 2023 to December 2023</div>
+                        <div className="p-1 text-sm bg-white rounded-lg font-semibold">HackYourFuture</div>
+                        </div>
+                        {/* center side */}
+                        <div className="w-1/6 bg-blue-500">
+                        <div className=""></div>
+                        <div className=""></div>
+                        </div>
+                        {/* right side */}
+                        <div className="w-1/3">
+                        </div>
+                        </div>
+
+                        {/* Experience list item 2 */}
+                        <div className="flex justify-between h-48">
+                        {/* Left side */}
+                        {/* center side */}
+                        <div className="">
+                        <div className=""></div>
+                        <div className=""></div>
+                        </div>
+                        {/* right side */}
+                        <div className="">
+                        <div>ICT and Math Teacher</div>
+                        <div>Cambridge International school - Erbil</div>
+                        <div>Planned and delivered engaging ICT and Math lessons to secondary and high school students.</div>
+                        <div>February 2017 to October 2021</div>
+                        </div>
+                        </div>
+
+                        {/* Experience list item 3 */}
+                        <div className="flex justify-between h-48">
+                        {/* Left side */}
+                        <div className="">
+                        <div>Voice Actor</div>
+                        <div>AL-Khalij, Freelancer</div>
+                        <div>Showcased versatility and creativity by delivering captivating performances through voice acting.</div>
+                        <div>May 2018 to September 2021</div>
+                        </div>
+                        {/* center side */}
+                        <div className="">
+                        <div className=""></div>
+                        <div className=""></div>
+                        </div>
+                        {/* right side */}
+                        <div className="">
+                        </div>
+                        </div>
+
+                        {/* Experience list item 2 */}
+                        <div className="flex justify-between h-48">
+                        {/* Left side */}
+                        {/* center side */}
+                        <div className="">
+                        <div className=""></div>
+                        <div className=""></div>
+                        </div>
+                        {/* right side */}
+                        <div className="">
+                        <div>Communication Engineer</div>
+                        <div>Syriatel- Syria</div>
+                        <div>Assisted in designing, implementing, and maintaining communication systems, ensuring seamless integration.</div>
+                        <div>January 2015 to June 2016</div>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             {/* SVG container */}
