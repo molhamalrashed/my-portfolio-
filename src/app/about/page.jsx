@@ -1,6 +1,8 @@
 "use client";
 
+import Brain from "@/components/brain";
 import {motion} from "framer-motion";
+
 
 const skills = ["Javascript", "React", "Node", "Express", "MongoDB","MySQL", "HTML", "CSS", "Tailwind", "Bootstrap","Next.js","Git", "Figma", "Photoshop","Audition", "Voice Acting", "Teaching"];
 
@@ -9,7 +11,7 @@ return (
     <motion.div className='h-full' initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}} >
         <div className="h-full overflow-scroll lg:flex">
     {/* Text container */}
-            <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 w-2/3 xl:w-1/2">
+            <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 md:w-2/3 md:pr-0 xl:w-1/2">
         {/* Biography */}
                 <div className="flex flex-col gap-8 justify-center pt-12">
                     <h1 className="text-2xl font-bold">About me</h1>
@@ -75,9 +77,9 @@ return (
                     {/* Experience list */}
                     <div className="">
                         {/* Experience list item 1 */}
-                        <div className="flex justify-between h-48">
+                        <div className="flex justify-between h-100">
                         {/* Left side */}
-                        <div className="w-1/3">
+                        <div className="h-fit w-1/3">
                         <div className="bg-white font-semibold p-3 rounded-b-lg rounded-s-lg">Full Stack Web Developer Trainee</div>
                         <div className="text-sm p-3 italic">Building Full stack web application using Javascript, HTML, CSS, React, MongoDB and other technologies.</div>
                         <div className="p-3 font-semibold text-red-400 text-sm">March 2023 to December 2023</div>
@@ -95,7 +97,7 @@ return (
                         </div>
 
                         {/* Experience list item 2 */}
-                        <div className="flex justify-between h-48">
+                        <div className="flex justify-between h-100">
                         {/* Left side */}
                         <div className="w-1/3">
                         </div>  
@@ -115,7 +117,7 @@ return (
                         </div>
 
                         {/* Experience list item 3 */}
-                        <div className="flex justify-between h-48">
+                        <div className="flex justify-between h-100">
                         {/* Left side */}
                         <div className="w-1/3">
                         <div className="bg-white font-semibold p-3 rounded-b-lg rounded-s-lg">Voice Actor</div>
@@ -135,7 +137,7 @@ return (
                         </div>
 
                         {/* Experience list item 4 */}
-                        <div className="flex justify-between h-48">
+                        <div className="flex justify-between h-100">
                         {/* Left side */}
                         <div className="w-1/3">
                         </div>  
@@ -147,7 +149,7 @@ return (
                         </div>
                         {/* right side */}
                         <div className="w-1/3">
-                        <div className="bg-white font-semibold p-3 rounded-b-lg rounded-s-lg">Communication Engineer</div>
+                        <div className="bg-white font-semibold p-3 rounded-b-lg rounded-s-lg w-fit">Communication Engineer</div>
                         <div className="text-sm p-3 italic">Assisted in designing, implementing, and maintaining communication systems, ensuring seamless integration.</div>
                         <div className="p-3 font-semibold text-red-400 text-sm">January 2015 to May 2016</div>
                         <div className="p-1 text-sm bg-white rounded-lg font-semibold w-fit">Syriatel - Damascus</div>
@@ -159,6 +161,7 @@ return (
             </div>
             {/* SVG container */}
             <div className="hidden lg:block w-1/3 xl:w-1/2">
+                <Brain/>
             </div>
         </div>
     </motion.div>
