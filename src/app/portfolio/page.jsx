@@ -8,7 +8,7 @@ import {motion, useTransform, useScroll} from "framer-motion";
 const items = [
     {
         id:1,
-        color: "from-blue-300 to-green-300",
+        color: "from-blue-200 to-green-200",
         title: "Aziel-Net",
         description: "a social network designed for refugees encompassing sign- up functionality. Users can add friends, react to posts, upload images, and access news from ( IND) .",
         image: "https://res.cloudinary.com/dtb1hpuil/image/upload/v1710443382/Screenshot_2024-03-14_193208_jvj0u4.png",
@@ -16,7 +16,7 @@ const items = [
     },
     {
         id:2,
-        color: "from-green-300 to-red-300",
+        color: "from-green-200 to-red-200",
         title: "All-in-1 quiz",
         description: "an app allowing users to engage in a game answering questions from various genres.",
         image: "https://res.cloudinary.com/dtb1hpuil/image/upload/v1710443381/Screenshot_2024-03-14_193202_ynamrn.png",
@@ -24,7 +24,7 @@ const items = [
     },
     {
         id:3,
-        color: "from-red-300 to-yellow-300",
+        color: "from-red-200 to-blue-200",
         title: "CInema-See",
         description: "a movie platform showcasing the latest movies. Including searching for movies, saving favorite films, and displaying detailed information about movies or series.",
         image: "https://res.cloudinary.com/dtb1hpuil/image/upload/v1710443375/Screenshot_2024-03-14_193146_h8loyi.png",
@@ -36,16 +36,28 @@ const PortfolioPage = () => {
 
 const ref = useRef();
 const {scrollYProgress} = useScroll({target: ref});
-const x = useTransform(scrollYProgress, [0,1],["0%", "100%"])
+const x = useTransform(scrollYProgress, [0,1],["0%", "-75%"])
 
 return (
-    <motion.div className='h-full' initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}} >
-        <div className="[h-600hv]" ref={ref}>
-            <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">My Works</div>
-            <div className="sticky top-0 h-screen gap-4 items-center">
-                {items.map((item)=>(
-                <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} key={item.id}>
-                    <div>
+    <motion.div
+      className="h-full"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
+      <div className="h-[600vh] relative" ref={ref}>
+        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+          My Works
+        </div>
+            <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+            <motion.div style={{ x }} className="flex">
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-red-100 to-blue-200" />
+            {items.map((item) => (
+              <div
+                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                key={item.id}
+              >
+                    <div className='flex flex-col relative text-white gap-8'>
                         <h1>{item.title}</h1>
                         <div>
                         <Image rsc={item.image} alt={item.title} fill />
@@ -54,6 +66,7 @@ return (
                         <Link href={item.link}><button className='bg-black text-white'>Demo</button></Link>
                     </div>
                 </div>))}
+                </motion.div>
             </div>
         </div>
     </motion.div>
