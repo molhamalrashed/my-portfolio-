@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {useRef} from "react";
 import {motion, useTransform, useScroll} from "framer-motion";
+import { Linefont } from 'next/font/google';
 
 const items = [
     {
@@ -34,6 +35,7 @@ const items = [
 
 const PortfolioPage = () => {
 
+
 const ref = useRef();
 const {scrollYProgress} = useScroll({target: ref});
 const x = useTransform(scrollYProgress, [0,1],["0%", "-75%"])
@@ -59,10 +61,10 @@ return (
               >
                     <div className='flex flex-col relative text-white gap-8'>
                         <h1>{item.title}</h1>
-                        <div>
-                        <Image rsc={item.image} alt={item.title} fill />
+                        <div >
+                        <Image src={item.image} alt={item.title} fill/>
                         </div>
-                        <p>{item.description}</p>
+                        <p className='text-black'>{item.description}</p>
                         <Link href={item.link}><button className='bg-black text-white'>Demo</button></Link>
                     </div>
                 </div>))}
@@ -70,9 +72,9 @@ return (
             </div>
                 </div>
                 <div className='w-screen h-screen flex flex-col gap-16 items-center justify-center text-center'>
-                  <h1 className='text-black'>Do you have a project</h1>
+                  <h1 className='text-black text-8xl'>Do you have a project</h1>
                   <div className='relative'>
-                    <svg viewBox='0 0 300 300' className='w-64 h-64 md:w-[500px] md:h-[500px]'>
+                    <motion.svg animate={{rotate:-360}} transition={{duration:8, ease:"linear", repeat:Infinity}} viewBox='0 0 300 300' className='w-64 h-64 md:w-[500px] md:h-[500px]'>
                       <defs>
                         <path id='circlePath'
                         d='M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0'>
@@ -83,7 +85,7 @@ return (
                 Front-end & Back-end  Web-Developer
               </textPath>
             </text>
-                    </svg>
+                    </motion.svg>
                     <Link href="/contact" className='w-16 h-16 md:w-24 md:h-24 absolute top-0 right-0 left-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center'>Hire me</Link>
                   </div>
         </div>
