@@ -17,7 +17,7 @@ return (
         </div>
         </div>
         {/* Form Container */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col justify-center gap-5 bg-red-50 rounded-xl p-20 mt-20 ">
+        <div className="h-1/2 lg:h-5/6 lg:w-1/2 flex items-center flex-col justify-center gap-5 bg-red-50 rounded-xl p-20 mt-10 ">
             <span>Dear Molham</span>
             <textarea rows={6} placeholder="Write your message here"></textarea>
             <span>Email Address</span>
