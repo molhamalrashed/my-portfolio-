@@ -87,7 +87,7 @@ return (
               </textPath>
             </text>
                     </motion.svg>
-                    <Link href="/contact" className='w-16 h-16 md:w-24 md:h-24 absolute top-0 right-0 left-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center'>Hire me</Link>
+                    <Link href="/contact" className='w-16 h-16 md:w-24 md:h-24 absolute top-0 right-0 left-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center z-10'>Hire me</Link>
                   </div>
         </div>
     </motion.div>
