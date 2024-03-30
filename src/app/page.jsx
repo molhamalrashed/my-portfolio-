@@ -18,8 +18,8 @@ const Homepage = () => {
       <p className='text-xs md:text-lg'>As a passionate and dedicated web developer, I am committed to continuous learning and self-improvement. I thrive in a dynamic team environment and possess strong organizational and time-management skills. With a background in teaching and voice acting, my excellent communication and interpersonal skills allow me to effectively collaborate with clients and colleagues.</p>
     
     {/* Buttons */}
-    <div className='lg:w-full flex gap-8'>
-      <a href="/portfolio" className='p-4 rounded-lg ring-1 ring-black bg-black text-white'>View my work</a>
+    <div className='lg:w-full flex gap-4 sm:gap-8 text-xs sm:text-xl '>
+      <a href="/portfolio" className='p-4 rounded-lg ring-1 ring-black bg-black text-white'>My work</a>
       <a href="/contact" className='p-4 rounded-lg ring-1 ring-black'>Contact me</a>
     </div>
     </div>
