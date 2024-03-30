@@ -23,7 +23,7 @@ const Homepage = () => {
       <a href="/contact" className='p-4 rounded-lg ring-1 ring-black'>Contact me</a>
     </div>
     </div>
-  </div>;
+  </div>
     </motion.div>
 )};
 
