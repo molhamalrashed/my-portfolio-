@@ -10,7 +10,7 @@ const Homepage = () => {
     {/* Image Section */}
     
     <div className="h-1/2 relative lg:h-full lg:w-1/2 z-10 ">
-      <Image src="https://res.cloudinary.com/dtb1hpuil/image/upload/v1711491908/molham_Png_npdvu1.png" alt="Molham" fill className='object-contain' />
+      <Image src="https://res.cloudinary.com/dtb1hpuil/image/upload/v1711816719/molham_Png_hn0tak.png" alt="Molham" fill className='object-contain' />
     </div>
     {/* Text section */}
     <div className="h-1/2 flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2">
